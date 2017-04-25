@@ -1,1 +1,38 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-react-hyperscript-helpers",     "homepage": "https://github.com/npmdoc/node-npmdoc-react-hyperscript-helpers",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-react-hyperscript-helpers.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### basic api documentation for  [react-hyperscript-helpers (v1.2.0)](https://github.com/jador/react-hyperscript-helpers#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-react-hyperscript-helpers.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-react-hyperscript-helpers) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-react-hyperscript-helpers.svg)](https://travis-ci.org/npmdoc/node-npmdoc-react-hyperscript-helpers)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-react-hyperscript-helpers",
+    "keywords": [
+        "documentation",
+        "react-hyperscript-helpers"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_react_hyperscript_helpers.js",
+    "name": "npmdoc-react-hyperscript-helpers",
+    "nameAlias": "npmdoc_react_hyperscript_helpers",
+    "nameOriginal": "npmdoc-react-hyperscript-helpers",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-react-hyperscript-helpers.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "2017.4.26"
+}
